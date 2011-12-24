@@ -1,0 +1,73 @@
+           	html, body { height: 100%; overflow: hidden; width: 100%; margin: 0; padding: 0; }
+			body {
+				overflow-y: auto; 
+				background:#2e1803 url('wood.jpg');
+				font-family:"Smokum", "Trebuchet MS", sans-serif;
+			}
+			#success{
+				margin-top:100px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 400px;
+				min-height: 496px;
+				background:url('poster.png');
+				position:relative;
+				color: #2e1b08;
+			}
+			#sucess a {
+				color: #000000;
+				text-decoration:none;
+			}
+			#success a:hover {
+				color: #EEEEEE;
+			}
+			#poster_inner{
+				margin:24px 68px 30px 68px;
+				position:absolute;
+				width:264px;
+			}
+			h1,h2,h3,h4 {
+				margin:0;
+				padding:0;
+				text-align:center;
+				display: block;
+				line-height: 1.2em;
+			}
+			h1 {
+				font-size: 50px;
+			}
+			h2 {
+				font-size: 40px;
+			}
+			h3 {
+				font-size: 40px;
+			}
+			h4 {
+				font-size: 20px;
+			}
+			#warn,#about {
+				font-weight:bold;
+				position:absolute;
+			}
+			#warn {
+				font-size: 16px;
+				right:36px;
+				bottom:21px;
+			}
+			#about {
+				font-size: 24px;
+				left:40px;
+				bottom:18px;
+			}
+			#userimage {
+				width:180px;
+				height:180px; /* adjust to image height max = clip */
+				margin: 14px auto 10px auto;
+
+			}
+			#userimage img {
+				opacity:0.63;
+				filter:alpha(opacity=63);
+				position: absolute;
+				clip:rect(0px,180px,260px,0px);
+			}
