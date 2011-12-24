@@ -1,76 +1,86 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+  "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Wanted: Dead or Alive</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Wanted: Dead or Alive</title>
 
-	<!-- Set the viewport width to device width for mobile -->
-	<meta name="viewport" content="width=device-width" />
-	
-	<meta name="description" content="Have you seen this scoundrel?" />
-	<meta name="keywords" content="" />
-	<meta property="og:type" content="website"/> 
-	<meta property="og:title" content="Wanted: Dead or Alive"/>
-	<meta property="og:description" content="Have you seen this scoundrel?"/>
-	<meta property="og:url" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:locale" content="en_US"/>
-	<meta property="fb:admins" content="1343225522, 13301678">
-	<link rel="icon" href="favicon.png" type="image/ico" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-	<link href='http://fonts.googleapis.com/css?family=Smokum' rel='stylesheet' type='text/css'>
-	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script>
-		!window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
-	</script>
-	<script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-	<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
-	<script src="/javascripts/main.js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
-	
-	
+  <meta name="description" content="Have you seen this scoundrel?" />
+  <meta name="keywords" content="" />
+  <meta property="og:type" content="website"/> 
+  <meta property="og:title" content="Wanted: Dead or Alive"/>
+  <meta property="og:description" content="Have you seen this scoundrel?"/>
+  <meta property="og:url" content="mustacheme.com/images/fb_logo.png"/>
+  <meta property="og:image" content=""/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="fb:admins" content="1343225522, 13301678">
+  <link rel="icon" href="favicon.png" type="image/ico" />
+
+  <link href='http://fonts.googleapis.com/css?family=Smokum' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script>
+  !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+  </script>
+  <script type="text/javascript" src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+  <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+  <script src="/javascripts/main.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+
+
 </head>
 <body>
-  
+
   <!-- social links loaded asynchronously -->
   <div id="social_block"></div>
-  
-  <div id="loading">loading...</div>
+
+  <div id="loading">Loading...</div>
   <div id="failed" style="display:none">
     sorry, but you need to be logged into facebook.
   </div>
-  
+
   <div id="success" style="display:none">
-  <div id="poster_inner">
-  <h1>Wanted</h1>
-  <h2>Dead or Alive</h2>
-  <div id="userimage"><img src="test.jpeg"></div>
-  <h3>Nate Gross</h3>
-  <h4>Scoundrel</h4>
+    <div id="poster_inner">
+      <h1>Wanted</h1>
+      <h2>Dead or Alive</h2>
+      <div id="userimage">
+        <img id="mustache" src="" />
+      </div>
+      <h3 id="name"></h3>
+      <h4>Scoundrel</h4>
+    </div>
+    <div id="warn"><a href="#">Warn your friends…</a></div>
+    <div id="about"><a href="#about_data">?</a></div>
   </div>
-  <div id="warn"><a href="#">Warn your friends…</a></div>
-  <div id="about"><a href="#">?</a></div>
-  </div>
-  
-  
-  <a id="show_about" href="#about">about</a>
+
 
   <!-- about box, shown with -->
   <div style="display:none">
-    <div id="data">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <div id="about_data">
+      <pre>
+      <h4>MustacheMe</h4>
+      thanks to:
+      facebook API
+      face.com API
+      <a href="//Mustachify.me">mustachify.me</a>        
+      <a href="http://ftisis-stock.deviantart.com/art/tileable-wood-texture-90119307">image</a> <a href="http://slevin28.deviantart.com/art/Wanted-77138644">credit</a> 
+      --
+      <a href="//twitter.com/#!/baygross">@baygross</a>
+      <a href="//twitter.com/#!/ng">@NG</a>
+      </pre>
     </div>
   </div>
-  
+
   <!-- facebook code -->
   <%= erb :facebook %>
-  
+
   <!-- google analytics -->
   <%= erb :google %>
-  
+
 </body>
 </html>
