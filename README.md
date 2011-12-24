@@ -1,3 +1,7 @@
-![the queen](http://mustachify.me/?src=http://www.librarising.com/astrology/celebs/images2/QR/queenelizabethii.jpg)
+A combination of the Facebook Graph API, Face.com API, and the brilliant work of Mustachify.me.
 
-http://mustachify.me/?src=YOUR-IMAGE-URL
+Visit [url] for more details.
+
+--
+@baygross
+@nategross

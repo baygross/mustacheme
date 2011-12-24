@@ -11,26 +11,33 @@ module Mustachio
       require 'newrelic_rpm' if ENV['NEW_RELIC_ID']
     end
     
-    # before do
-    #   app_host = ENV['MUSTACHIO_APP_DOMAIN']
-    #   if app_host && request.host != app_host
-    #     request_host_with_port = request.env['HTTP_HOST']
-    #     redirect request.url.sub(request_host_with_port, app_host), 301
-    #   end
-    # end
+    #------- Routes ------------
     
+    #root
+    get '/' do 
+      erb :index
+    end
     
-    get %r{^/(\d+|rand)?$} do |stache_num|
-      src = params[:src]
-      if src
-        # use the specified stache, otherwise fall back to random
-        image = Magickly.process_src params[:src], :mustachify => (stache_num || true)
+    #mustachify
+    get '/m' do
+        if !params[:src]
+          erb :index 
+          return
+        end
+        
+        image = Magickly.process_src( params[:src], :mustachify => 0 )
         image.to_response(env)
-      else
-        @stache_num = stache_num
-        @site = Addressable::URI.parse(request.url).site
-        erb :index
-      end
+    end
+    
+    #social media links
+    get '/get_social_media' do
+      erb :social
+    end
+    
+    #show a user's page
+    get '/:fbid' do
+      @fb_user = params[:fbid]
+      erb :index
     end
     
   end
