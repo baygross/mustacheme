@@ -1,0 +1,7 @@
+development:
+  api_key: 
+  secret_key: 
+ 
+production:
+  api_key: 
+  secret_key:

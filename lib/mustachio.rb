@@ -18,8 +18,8 @@ module Mustachio
     
     def setup
       @@face_client = Face.get_client(
-        :api_key => (ENV['MUSTACHIO_FACE_API_KEY'] || raise("Please set MUSTACHIO_FACE_API_KEY.")),
-        :api_secret => (ENV['MUSTACHIO_FACE_API_SECRET'] || raise("Please set MUSTACHIO_FACE_API_SECRET."))
+        :api_key => (FaceAPI::KEY || raise("Please set MUSTACHIO_FACE_API_KEY.")),
+        :api_secret => (FaceAPI::SECRET || raise("Please set MUSTACHIO_FACE_API_SECRET."))
       )
       
       staches = YAML.load(File.read(File.join(File.dirname(__FILE__), '..', 'config', 'staches.yml')))
