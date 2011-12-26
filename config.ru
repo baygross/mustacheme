@@ -8,19 +8,15 @@ ENV['root'] = File.expand_path(File.dirname(__FILE__))
 
 #import facebook api credentials
 module FacebookAPI
- @root = ENV['root']
- CONFIG = YAML.load_file( @root + "/" + "config/facebook.yml" )[ ENV['RACK_ENV'] ]
- APP_ID = CONFIG['app_id']
- SECRET = CONFIG['secret_key']
- CALLBACK_URL = CONFIG['callback_url']
+ APP_ID = ENV['fb_app_id'] 
+ SECRET = ENV['fb_app_secret'] 
+ CALLBACK_URL = ENV['fb_app_callback'] 
 end
 
 #import Face.com api credentials
 module FaceAPI
-  @root = ENV['root']
-  CONFIG = YAML.load_file( @root + "/" + "config/face.yml" )[ ENV['RACK_ENV'] ]
-  KEY = CONFIG['api_key']
-  SECRET = CONFIG['secret_key']  
+  KEY = ENV['face_api_key'] 
+  SECRET = ENV['face_secret_key'] 
 end
 
 
