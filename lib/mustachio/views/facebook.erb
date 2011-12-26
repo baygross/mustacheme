@@ -13,7 +13,8 @@
 
   //try to grab FB id
   FB.getLoginStatus( function(response){
-   if ( response.authResponse.userID ) 
+    console.log( response )
+   if ( response.authResponse && response.authResponse.userID ) 
      showMustache( response.authResponse.userID  );
    else 
      cantShowMustache();
