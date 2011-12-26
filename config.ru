@@ -16,7 +16,7 @@ end
 #import Face.com api credentials
 module FaceAPI
   KEY = ENV['face_api_key'] 
-  SECRET = ENV['face_secret_key'] 
+  SECRET = ENV['face_api_secret'] 
 end
 
 
