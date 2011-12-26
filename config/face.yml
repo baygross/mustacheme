@@ -1,0 +1,7 @@
+development:
+  api_key: ENV['face_api_key'] 
+  secret_key: ENV['face_secret_key'] 
+ 
+production:
+  api_key: ENV['face_api_key'] 
+  secret_key: ENV['face_secret_key'] 

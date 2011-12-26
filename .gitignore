@@ -47,7 +47,6 @@ pkg
 # For rubinius:
 #*.rbc
 
-/config/*.yml
 .rvmrc
 *.lock
 *.LOCK
