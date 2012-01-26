@@ -15,7 +15,7 @@ module Mustachio
     
     #root
     get '/' do 
-      redirect '/zuck'
+      redirect '/billgates'
     end
     
     #mustachify
