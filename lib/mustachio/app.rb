@@ -15,7 +15,7 @@ module Mustachio
     
     #root
     get '/' do 
-      erb :index
+      redirect '/zuck'
     end
     
     #mustachify
